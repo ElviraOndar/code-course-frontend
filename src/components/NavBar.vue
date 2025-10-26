@@ -2,8 +2,11 @@
   <nav class="navbar">
     <div class="left">
       <router-link to="/" class="logo">CodeCourse</router-link>
-      <router-link to="/courses" class="link">Все курсы</router-link>
+      <router-link to="/" class="link">Главная</router-link>
+      <!-- Ссылка на профиль, если пользователь авторизован -->
+      <router-link v-if="auth.user" to="/profile" class="link">Мой профиль</router-link>
     </div>
+   
 
     <div class="right">
       <span v-if="auth.user" class="welcome">
