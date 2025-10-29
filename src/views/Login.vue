@@ -29,7 +29,7 @@ const auth = useAuthStore();
 const router = useRouter();
 
 async function handleLogin() {
-  error.value = null; // сброс ошибки перед новой попыткой
+  error.value = null; 
   try {
     await auth.login(username.value, password.value);
     // После успешного логина перенаправляем на профиль
